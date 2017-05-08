@@ -1,0 +1,83 @@
+body {
+  margin: 100px 0;
+  font-family: 'Inconsolata', monospace;
+  font-size: 14px;
+  color: #dfe1e8;
+  background: #343d46;
+}
+#app, div.input-area {
+  height: 100%;
+}
+div#main {
+  max-width: 560px;
+  background: #151515;
+  border-radius: 5px;
+  height: 400px;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(50, 50, 50, 0.59);
+  -moz-box-shadow:    0px 0px 13px 0px rgba(50, 50, 50, 0.59);
+  box-shadow:         0px 0px 13px 0px rgba(50, 50, 50, 0.59);
+  overflow: hidden;
+}
+.holder {
+  overflow: auto;
+}
+.prompt {
+  color: #d28445;
+}
+input[type=text], input[type=text]:focus {
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 22px;
+  background: #151515;
+  color: #ebcb8b;
+  width: 80%;
+}
+p {
+  margin-bottom: 0;
+  line-height: 21px;
+}
+#bar {
+  height: 30px;
+  max-width: 560px;
+  background: #bbb;
+  border-radius: 5px;
+}
+#content {
+  padding: 20px;
+  height: 100%;
+}
+
+.credits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  font-family: "Roboto Slab", serif;
+  background: #fff;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.05);
+}
+a {
+  text-decoration: none;
+  color: #32ceea;
+}
+.credits_left {
+  display: block;
+  position: absolute;
+  left: 20px;
+}
+.credits_right {
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+.social_icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+}

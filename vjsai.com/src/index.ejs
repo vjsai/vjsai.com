@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  **NOTE:** This is a template for index.html. It uses ejs and htmlWebpackPlugin to generate a different index.html for each environment. htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles to this file. The generated bundles have hash-based filenames, so it's necessary to add the references dynamically.
+  For more info on ejs, see http://www.embeddedjs.com/. For examples of using it with htmlWebpackPlugin, see https://github.com/jaketrent/html-webpack-template/blob/master/index.ejs
+  -->
+<head>
+  <!--
+    The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
+    This is an example of how to add features to index.html for only one environment.
+    To track JavaScript errors via TrackJS, sign up for a free trial at TrackJS.com and enter your token in /webpack.config.prod.js on line 55.
+   -->
+  <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+  <script>window._trackJs = {token: '<%= htmlWebpackPlugin.options.trackJSToken %>'};</script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-94086527-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <script src="https://d2zah9y47r7bi2.cloudfront.net/releases/current/tracker.js"></script>
+  <% } %>
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8"/>
+  <title>VJSAI - Web Developer</title>
+</head>
+<body>
+<div id="bar" class='container'>
+  <svg height="20" width="100">
+    <circle cx="24" cy="14" r="5" fill="#ff3b47" />
+    <circle cx="44" cy="14" r="5" fill="#ffc100" />
+    <circle cx="64" cy="14" r="5" fill="#00d742" />
+  </svg>
+</div>
+<div class="container" id="main">
+  <div class="holder">
+    <div id="content">
+      <div id="app"></div>
+    </div>
+  </div>
+</div>
+<div class="credits">
+  <div class="credits_left">
+    Designed by <a href="http://www.vjsai.com" target="_blank" alt="vjsai.com">Vijay Sai</a></div>
+  <div class="credits_right">
+    <a href="https://www.instagram.com/vijaysaijnv/" target="_blank" alt="Instagram @vijaysaijnv"><img src="http://www.arct.cam.ac.uk/images/instagram-icon/image" class="social_icon"></a>
+    <a href="https://twitter.com/vijaysaij" target="_blank" alt="Twitter @vijaysaij"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png" class="social_icon"></a>
+    <a href="https://www.linkedin.com/in/vjsaijnv/" target="_blank" alt="@linkedin vjsaijnv" ><img src="https://image.flaticon.com/icons/svg/34/34405.svg" class="social_icon"/></a>
+    <a href="https://github.com/vjsai" target="_blank" alt="@github vjsai"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" class="social_icon" /></a>
+  </div>
+</div>
+</body>
+</html>

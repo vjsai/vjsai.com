@@ -1,0 +1,14 @@
+/**
+ * Created by vijay on 21/3/17.
+ */
+import * as constants from './actionTypes';
+let command_map =   {};
+command_map[constants.SHOW_HELP] = [
+  "help - this help text",
+  "github - view my github profile",
+  "source - browse the code for this page",
+  "intro - to view my profile"
+];
+command_map[constants.LIST_FILES] =["README.md"];
+command_map[constants.SHOW_WELCOME_MESSAGE] = ["Hi my name is vijay Sai.","I am a passionate web developer and a geek.","Please checkout my github profile"];
+export default command_map;
